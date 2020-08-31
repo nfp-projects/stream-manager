@@ -1,0 +1,36 @@
+{
+  "name": "stream-manager",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.mjs",
+  "dependencies": {
+    "lodash": "^4.17.20",
+    "lowdb": "^1.0.0",
+    "node-static": "^0.7.11",
+    "socket.io-serveronly": "^2.3.0"
+  },
+  "devDependencies": {
+    "asbundle": "^2.6.1",
+    "mithril": "^2.0.4",
+    "nodemon": "^2.0.4",
+    "npm-run-all": "^4.1.5",
+    "run-p": "0.0.0"
+  },
+  "scripts": {
+    "js:build:main": "asbundle app/index.js public/main.js",
+    "js:watch": "nodemon --watch app --exec \"npm run js:build:main\"",
+    "server:watch": "nodemon --watch api api/server.mjs",
+    "dev": "run-p js:watch server:watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nfp-projects/stream-manager.git"
+  },
+  "author": "Jonatan Nilsson",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/nfp-projects/stream-manager/issues"
+  },
+  "homepage": "https://github.com/nfp-projects/stream-manager#readme"
+}

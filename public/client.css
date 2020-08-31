@@ -1,0 +1,46 @@
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  height: 100%;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+body {
+  background: #3f3f41;
+  color: #f1f1f1;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  font-family: Helvetica, sans-serif, Arial;
+}
+
+/* Container */
+.container {
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  flex-grow: 2;
+}
+
+.disconnected {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.8);
+  color: #fff;
+  font-size: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
